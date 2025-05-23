@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubetask-deployment
+  name: kubepro-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: kubetask
+      app: kubepro
   template:
     metadata:
       labels:
-        app: kubetask
+        app: kubepro
     spec:
       containers:
-        - name: kubetask
-          image:siva2805/kubetask
+        - name: kubepro
+          image: siva2805/kubetask
           ports:
             - containerPort: 80
           command: ["/bin/sh", "-c"]
